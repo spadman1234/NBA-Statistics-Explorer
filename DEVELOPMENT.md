@@ -3,3 +3,11 @@
 - Collected all APIs needed to collect data and read documentation
 	- [https://cheapdatafeeds.com/](https://cheapdatafeeds.com/) - previous 4 years of NBA scores and live spreads
 	- [https://github.com/swar/nba_api](https://github.com/swar/nba_api) - Python interface to interact with NBA.com's API for stats and scores
+
+## 11/21
+- Refreshed myself on how multiple regression models work  by reading the following:
+	- [https://www.kaggle.com/wduckett/beane-and-depodesta-s-regression-roadmap](https://www.kaggle.com/wduckett/beane-and-depodesta-s-regression-roadmap)
+	- [https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53)
+	- [https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models](https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models)
+- Researched existing NBA regression models and noted which variables were used most often (so I can scrape this data)
+- Watched tutorials on ofxGui
