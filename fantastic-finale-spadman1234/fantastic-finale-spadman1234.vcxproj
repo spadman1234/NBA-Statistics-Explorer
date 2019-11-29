@@ -200,6 +200,43 @@
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\allocators.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\document.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\encodedstream.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\encodings.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\error\en.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\error\error.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\filereadstream.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\filewritestream.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\fwd.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\clzll.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\itoa.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\meta.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\pow10.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\regex.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\stack.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\strtod.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\swap.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\memorybuffer.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\memorystream.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\pointer.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\prettywriter.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\rapidjson.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\reader.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\schema.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stream.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stringbuffer.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\writer.h" />
     <ClInclude Include="src\nbaScraper.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.h" />
@@ -233,6 +270,9 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\2019-20 stats.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>

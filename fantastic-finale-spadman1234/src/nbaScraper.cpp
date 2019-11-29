@@ -4,6 +4,8 @@
 #include <urlmon.h>
 #include <sstream>
 #include <string>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -26,4 +28,14 @@ string nbaScraper::get_str_contents_from_url(wstring url) {
     stream->Release();
     string resultString = ss.str();
     return resultString;
+}
+
+std::string nbaScraper::get_str_contents_from_file(std::string filename) {
+	// The following code is adapted from:
+	// https://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring
+    std::ifstream t(filename);
+    std::stringstream buffer;
+    buffer << t.rdbuf();
+    t.close();
+    return buffer.str();
 }

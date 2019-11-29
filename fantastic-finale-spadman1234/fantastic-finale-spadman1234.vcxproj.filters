@@ -75,6 +75,9 @@
     <Filter Include="addons\ofxNetwork\src">
       <UniqueIdentifier>{3D1C10C7-8F35-E796-9C70-F5F3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{65fe0b84-c439-4f4e-9d34-b60df22417c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
@@ -140,8 +143,124 @@
     <ClInclude Include="src\nbaScraper.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\allocators.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\cursorstreamwrapper.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\document.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\encodedstream.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\encodings.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\error\en.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\error\error.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\filereadstream.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\filewritestream.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\fwd.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\biginteger.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\clzll.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\diyfp.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\dtoa.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\ieee754.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\itoa.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\meta.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\pow10.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\regex.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\stack.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\strfunc.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\strtod.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\internal\swap.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\istreamwrapper.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\memorybuffer.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\memorystream.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\msinttypes\inttypes.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\msinttypes\stdint.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\ostreamwrapper.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\pointer.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\prettywriter.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\rapidjson.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\reader.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\schema.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stream.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stringbuffer.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\writer.h">
+      <Filter>addons</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\2019-20 stats.txt">
+      <Filter>data</Filter>
+    </Text>
   </ItemGroup>
 </Project>
