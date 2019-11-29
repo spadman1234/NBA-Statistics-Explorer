@@ -1,15 +1,15 @@
 #pragma comment(lib, "urlmon.lib")
 
+#include "nbaScraper.h"
 #include <urlmon.h>
 #include <sstream>
 #include <string>
-#include "nbaScraper.h"
 
 using namespace std;
 
-string get_str_contents_from_url(wstring url) {
-	// The following code is adapted from:
-	// https://stackoverflow.com/questions/1011339/how-do-you-make-a-http-request-with-c/51959694#51959694
+string nbaScraper::get_str_contents_from_url(wstring url) {
+    // The following code is adapted from:
+    // https://stackoverflow.com/questions/1011339/how-do-you-make-a-http-request-with-c/51959694#51959694
     IStream* stream;
     HRESULT result = URLOpenBlockingStream(0, url.c_str(), &stream, 0, 0);
     if (result != 0) {

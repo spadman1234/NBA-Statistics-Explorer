@@ -1,0 +1,7 @@
+#pragma once
+
+#include <string>
+
+namespace nbaScraper {
+	std::string get_str_contents_from_url(std::wstring url);
+}

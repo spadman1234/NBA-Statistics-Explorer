@@ -52,7 +52,7 @@
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp">
       <Filter>addons\ofxNetwork\src</Filter>
     </ClCompile>
-    <ClCompile Include="nbaScraper.cpp">
+    <ClCompile Include="src\nbaScraper.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -137,7 +137,7 @@
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h">
       <Filter>addons\ofxNetwork\src</Filter>
     </ClInclude>
-    <ClInclude Include="nbaScraper.h">
+    <ClInclude Include="src\nbaScraper.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
