@@ -3,7 +3,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){ 
-	
+	std::cout << nbaScraper::get_str_contents_from_url("https://stats.nba.com/stats/leaguedashteamstats");
 }
 
 //--------------------------------------------------------------
