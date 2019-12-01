@@ -11,3 +11,9 @@
 	- [https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models](https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models)
 - Researched existing NBA regression models and noted which variables were used most often (so I can scrape this data)
 - Watched tutorials on ofxGui
+
+## 11/29
+- Decided to use C++ to get statistics directly from NBA.com's API rather than use Python and nba_api
+- Wrote code to download data from the web
+	- Currently broken so I downloaded the current stats so I have local data to work with temporarily
+- Installed RapidJSON to parse JSON in C++
