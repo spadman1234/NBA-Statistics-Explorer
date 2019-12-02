@@ -22,3 +22,7 @@
 - Installed libCurl for network operations
 - Wrote working code to use libCurl to download JSON data from the web
 - Began looking for a new data source (NBA.com's API not working)
+
+## 12/1
+- Found a new NBA stats API to use: data.nba.net
+- Testing downloading updated team and player stats from this API
