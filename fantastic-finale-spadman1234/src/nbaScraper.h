@@ -2,8 +2,7 @@
 
 #include <string>
 
-namespace nbaScraper {
-//const char *TMP_FILE = "tmpdata";
-std::string get_str_contents_from_url(const char* url);
-std::string get_str_contents_from_file(std::string filename);
+namespace nba_stats {
+const char* GetStrContentsFromUrl(const char* url);
+const char* GetStrContentsFromFile(std::string filename);
 }

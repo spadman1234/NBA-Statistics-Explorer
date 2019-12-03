@@ -55,6 +55,12 @@
     <ClCompile Include="src\nbaScraper.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\jsonParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nbaTeamStats.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -208,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\writer.h">
       <Filter>src\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nbaTeamStats.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,16 @@
 #include "ofApp.h"
 #include "nbaScraper.h"
+#include "jsonParser.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){ 
-	std::cout << nbaScraper::get_str_contents_from_url("https://stats.nba.com/stats/leaguedashteamstats");
+	ofBackground(80, 80, 80);
+	//std::cout << nbaScraper::getStrContentsFromUrl("http://data.nba.net/10s/prod/v1/2019/team_stats_rankings.json");
+        nba_stats::GetTeamStatsFromJson(
+            "hawks",
+            nba_stats::GetStrContentsFromUrl("http://data.nba.net/10s/prod/v1/"
+                                              "2019/team_stats_rankings.json"));
+
 }
 
 //--------------------------------------------------------------
