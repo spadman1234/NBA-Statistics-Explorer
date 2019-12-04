@@ -25,4 +25,9 @@
 
 ## 12/1
 - Found a new NBA stats API to use: data.nba.net
-- Testing downloading updated team and player stats from this API
+- Tested downloading updated team and player stats from this API
+
+## 12/3
+- Wrote nbaTeamStats class to store any team's updated statistics in a hash map
+- Wrote code to populate the class's hash map from JSON data from the internet
+- Tested the class
