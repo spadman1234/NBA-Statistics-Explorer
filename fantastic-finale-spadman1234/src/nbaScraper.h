@@ -3,6 +3,6 @@
 #include <string>
 
 namespace nba_stats {
-const char* GetStrContentsFromUrl(const char* url);
-const char* GetStrContentsFromFile(std::string filename);
+std::string GetStrContentsFromUrl(const char* url);
+std::string GetStrContentsFromFile(std::string filename);
 }

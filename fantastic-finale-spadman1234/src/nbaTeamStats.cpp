@@ -1,13 +1,19 @@
 #include "nbaTeamStats.h"
-#include <string>
 #include <map>
+#include <string>
+#include "assert.h"
 
-nba_stats::NbaTeamStats::NbaTeamStats(std::string city, std::string teamname,
-                                      std::string abbreviation,
-                                      std::map<std::string, float> &stats) {
-    city_ = city;
-    teamname_ = teamname;
-    abbreviation_ = abbreviation;
+nba_stats::NbaTeamStats::NbaTeamStats() {}
+
+nba_stats::NbaTeamStats::NbaTeamStats(std::map<std::string, std::string>& info,
+                                      std::map<std::string, float>& stats) {
+    info_ = info;
+    stats_ = stats;
+}
+
+void nba_stats::NbaTeamStats::init(std::map<std::string, std::string>& info,
+                                   std::map<std::string, float>& stats) {
+    info_ = info;
     stats_ = stats;
 }
 
@@ -15,8 +21,6 @@ float nba_stats::NbaTeamStats::GetStat(std::string statname) {
     return stats_[statname];
 }
 
-std::string nba_stats::NbaTeamStats::GetCity() { return city_; }
-
-std::string nba_stats::NbaTeamStats::GetTeamName() { return teamname_; }
-
-std::string nba_stats::NbaTeamStats::GetAbbreviation() { return abbreviation_; }
+std::string nba_stats::NbaTeamStats::GetInfo(std::string infoid) {
+    return info_[infoid];
+}

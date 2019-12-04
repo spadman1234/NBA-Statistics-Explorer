@@ -12,12 +12,12 @@ using namespace std;
 
 const char* TMP_FILENAME = "tmpdata";
 
-const char* nba_stats::GetStrContentsFromUrl(const char* url) {
+std::string nba_stats::GetStrContentsFromUrl(const char* url) {
 	CURL *curl;
     curl = curl_easy_init();
 	
 	FILE *fp;
-    fopen_s(&fp, TMP_FILENAME, "wb");
+    fopen_s(&fp, "tmpdata", "wb");
 
 	curl_easy_setopt(curl, CURLOPT_URL, url);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
@@ -26,7 +26,7 @@ const char* nba_stats::GetStrContentsFromUrl(const char* url) {
 
 	auto result = curl_easy_perform(curl);
 	
-	const char* filecontents = "";
+	std::string filecontents = "";
 
 	fclose(fp);
 
@@ -34,19 +34,19 @@ const char* nba_stats::GetStrContentsFromUrl(const char* url) {
 		std::cerr << curl_easy_strerror(result);
 	}
 	else {
-		filecontents = GetStrContentsFromFile(TMP_FILENAME);
+		filecontents = GetStrContentsFromFile("tmpdata");
 	}
 	
     curl_easy_cleanup(curl);
     return filecontents;
 }
 
-const char* nba_stats::GetStrContentsFromFile(std::string filename) {
+std::string nba_stats::GetStrContentsFromFile(std::string filename) {
     // The following code is adapted from:
     // https://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring
     std::ifstream t(filename);
     std::stringstream buffer;
     buffer << t.rdbuf();
     t.close();
-    return buffer.str().c_str();
+    return buffer.str();
 }

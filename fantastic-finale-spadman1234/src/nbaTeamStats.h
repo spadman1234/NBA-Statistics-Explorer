@@ -1,11 +1,13 @@
 #pragma once
+#include <map>
 
 namespace nba_stats {
 class NbaTeamStats {
 private:
-    std::string city_;
-	std::string teamname_;
-    std::string abbreviation_;
+    std::string kTeamStatNames[15] = {"min",  "fgp",  "tpp", "ftp",  "orpg",
+                                      "drpg", "trpg", "apg", "tpg",  "spg",
+                                      "bpg",  "pfpg", "ppg", "oppg", "eff"};
+	std::map<std::string, std::string> info_;
     std::map<std::string, float> stats_;
     /*
 	float min_;  //average minutes
@@ -25,11 +27,12 @@ private:
     float eff_;  //efficiency
 	*/
 public:
-    NbaTeamStats(std::string city, std::string teamname,
-                 std::string abbreviation, std::map<std::string, float> &stats);
-	float GetStat(std::string statname);
-    std::string GetCity();
-    std::string GetTeamName();
-    std::string GetAbbreviation();
+    nba_stats::NbaTeamStats::NbaTeamStats();
+	NbaTeamStats(std::map<std::string, std::string>& info,
+                 std::map<std::string, float>& stats);
+    void init(std::map<std::string, std::string>& info,
+                  std::map<std::string, float>& stats);
+    float GetStat(std::string statid);
+    std::string GetInfo(std::string infoid);
 };
 }
