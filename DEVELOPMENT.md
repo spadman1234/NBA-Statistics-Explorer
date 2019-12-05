@@ -17,3 +17,17 @@
 - Wrote code to download data from the web
 	- Currently broken so I downloaded the current stats so I have local data to work with temporarily
 - Installed RapidJSON to parse JSON in C++
+
+## 11/30
+- Installed libCurl for network operations
+- Wrote working code to use libCurl to download JSON data from the web
+- Began looking for a new data source (NBA.com's API not working)
+
+## 12/1
+- Found a new NBA stats API to use: data.nba.net
+- Tested downloading updated team and player stats from this API
+
+## 12/3
+- Wrote nbaTeamStats class to store any team's updated statistics in a hash map
+- Wrote code to populate the class's hash map from JSON data from the internet
+- Tested the class
