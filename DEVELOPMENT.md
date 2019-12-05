@@ -31,3 +31,6 @@
 - Wrote nbaTeamStats class to store any team's updated statistics in a hash map
 - Wrote code to populate the class's hash map from JSON data from the internet
 - Tested the class
+
+## 12/5
+- Wrote NbaGame class to store info about an upcoming or completed game
