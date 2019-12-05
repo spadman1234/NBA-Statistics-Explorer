@@ -61,6 +61,9 @@
     <ClCompile Include="src\nbaTeamStats.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\nbaGame.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -216,6 +219,9 @@
       <Filter>src\rapidjson</Filter>
     </ClInclude>
     <ClInclude Include="src\nbaTeamStats.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nbaGame.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

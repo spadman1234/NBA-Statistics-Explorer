@@ -6,11 +6,8 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
     ofBackground(80, 80, 80);
-    std::string json = nba_stats::GetStrContentsFromUrl("http://data.nba.net/10s/prod/v1/2019/team_stats_rankings.json");
-    nba_stats::NbaTeamStats hawksStats;
-	nba_stats::GetTeamStatsFromJson(hawksStats, "hawks", json);
-    auto ppg = hawksStats.GetStat("apg");
-    printf("%g\n", ppg);
+    std::string teamStatsJson = nba_stats::GetStrContentsFromUrl("http://data.nba.net/10s/prod/v1/2019/team_stats_rankings.json");
+    
 }
 
 //--------------------------------------------------------------

@@ -2,6 +2,7 @@
 #include <map>
 
 namespace nba_stats {
+
 class NbaTeamStats {
 private:
     std::string kTeamStatNames[15] = {"min",  "fgp",  "tpp", "ftp",  "orpg",
@@ -35,4 +36,5 @@ public:
     float GetStat(std::string statid);
     std::string GetInfo(std::string infoid);
 };
+
 }
