@@ -34,3 +34,7 @@
 
 ## 12/5
 - Wrote NbaGame class to store info about an upcoming or completed game
+
+## 12/9
+- The NbaGame can now be populated with data about upcoming games using a new data source
+- A third data source is now used to get wins and losses for each team
