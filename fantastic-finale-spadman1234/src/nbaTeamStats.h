@@ -5,11 +5,14 @@ namespace nba_stats {
 
 class NbaTeamStats {
 private:
-    std::string kTeamStatNames[15] = {"min",  "fgp",  "tpp", "ftp",  "orpg",
+    std::string kTeamStatNames[18] = {"min",  "fgp",  "tpp", "ftp",  "orpg",
                                       "drpg", "trpg", "apg", "tpg",  "spg",
                                       "bpg",  "pfpg", "ppg", "oppg", "eff"};
 	std::map<std::string, std::string> info_;
     std::map<std::string, float> stats_;
+    int wins_;
+    int losses_;
+    float winpctg_;
     /*
 	float min_;  //average minutes
     float fgp_;  //field goal percentage
@@ -35,6 +38,10 @@ public:
                   std::map<std::string, float>& stats);
     float GetStat(std::string statid);
     std::string GetInfo(std::string infoid);
+    void SetWinsLosses(int wins, int losses);
+    int GetWins();
+    int GetLosses();
+    float GetWinPercentage();
 };
 
 }

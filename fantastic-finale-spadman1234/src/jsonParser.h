@@ -11,4 +11,5 @@
 namespace nba_stats {
 bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamcode, std::string json);
 bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json);
+bool SetTeamWinsLossesFromJson(NbaTeamStats &team, std::string json);
 }

@@ -24,3 +24,15 @@ float nba_stats::NbaTeamStats::GetStat(std::string statname) {
 std::string nba_stats::NbaTeamStats::GetInfo(std::string infoid) {
     return info_[infoid];
 }
+
+void nba_stats::NbaTeamStats::SetWinsLosses(int wins, int losses) {
+    wins_ = wins;
+    losses_ = losses;
+    winpctg_ = (float)wins / (float)(losses + wins);
+}
+
+int nba_stats::NbaTeamStats::GetWins() { return wins_; }
+
+int nba_stats::NbaTeamStats::GetLosses() { return losses_; }
+
+float nba_stats::NbaTeamStats::GetWinPercentage() { return winpctg_; }

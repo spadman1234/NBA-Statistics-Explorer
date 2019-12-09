@@ -16,7 +16,6 @@ bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamcode, std::string 
 	// Populate statmap with data from JSON
     int numTeams = document["league"]["standard"]["regularSeason"]["teams"].GetArray().Size();
     for (int i = 0; i < numTeams; i++) {
-        //std::cout << document["league"]["standard"]["regularSeason"]["teams"][i]["teamcode"].GetString() << std::endl;
         if (document["league"]["standard"]["regularSeason"]["teams"][i]
                     ["teamcode"].GetString() == teamcode) {
             for (std::string str : kTeamStatNames) {
@@ -53,5 +52,25 @@ bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
 	game.init(homeTeam, awayTeam, date, true, 0, 0, homeTeamHandicap,
                        isHomeTeamFavored);
     return true;
+}
+bool SetTeamWinsLossesFromJson(NbaTeamStats &team, std::string json) { 
+	rapidjson::Document document;
+    document.Parse(json.c_str());
+    assert(document.HasMember("league"));
+
+	//auto teams = document["league"]["standard"]["teams"].GetObject();
+    std::string teamAbbreviation = team.GetInfo("abbreviation");
+
+	int numTeams = document["league"]["standard"]["teams"].GetArray().Size();
+    for (int i = 0; i < numTeams; i++) {
+            if (document["league"]["standard"]["teams"][i]["teamSitesOnly"]
+                        ["teamTricode"].GetString() == teamAbbreviation) {
+				int wins = std::stoi(document["league"]["standard"]["teams"][i]["win"].GetString());
+                int losses = std::stoi(document["league"]["standard"]["teams"][i]["loss"].GetString());
+                team.SetWinsLosses(wins, losses);
+                return true;
+            }
+	}
+	return false;
 }
 }
