@@ -2,7 +2,8 @@
 #include <string>
 
 namespace nba_stats {
-NbaGame::NbaGame(std::string homeTeam, std::string awayTeam, std::string date,
+NbaGame::NbaGame() {}
+void NbaGame::init(std::string homeTeam, std::string awayTeam, std::string date,
                  bool isUpcoming, int homeTeamPoints, int awayTeamPoints,
                  float homeTeamHandicap, bool isHomeTeamFavorite) {
     homeTeam_ = homeTeam;

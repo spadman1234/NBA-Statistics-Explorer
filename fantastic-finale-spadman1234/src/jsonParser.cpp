@@ -36,4 +36,22 @@ bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamcode, std::string 
 	}
     return false;
 }
+bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
+    rapidjson::Document document;
+    document.Parse(json.c_str());
+    assert(document.HasMember("games"));
+
+	std::string gameId = std::to_string(gameNum);
+	auto gameJson = document["games"][gameId.c_str()].GetObject();
+	
+    std::string awayTeam = gameJson["awayTeam"].GetString();
+    std::string homeTeam = gameJson["homeTeam"].GetString();
+    std::string date = gameJson["startDate"].GetString();
+    float homeTeamHandicap = std::stof(gameJson["gameSpreadHomeHandicap"].GetString());
+    bool isHomeTeamFavored = (homeTeamHandicap < 0);
+
+	game.init(homeTeam, awayTeam, date, true, 0, 0, homeTeamHandicap,
+                       isHomeTeamFavored);
+    return true;
+}
 }
