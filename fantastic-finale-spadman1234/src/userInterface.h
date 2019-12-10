@@ -17,5 +17,6 @@ private:
 public:
     void setup(std::vector<nba_stats::NbaGame> & upcomingGames);
 	void draw();
+	void handleInput(int keycode);
 };
 }

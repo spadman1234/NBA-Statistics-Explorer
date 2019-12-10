@@ -26,7 +26,9 @@ void ofApp::update() {}
 void ofApp::draw() { upcomingGamesDisplay.draw();  }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key) {}
+void ofApp::keyPressed(int key) {
+	upcomingGamesDisplay.handleInput(key);
+}
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key) {}
