@@ -64,6 +64,9 @@
     <ClCompile Include="src\nbaGame.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\userInterface.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -222,6 +225,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\nbaGame.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\userInterface.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

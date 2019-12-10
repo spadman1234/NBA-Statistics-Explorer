@@ -1,48 +1,29 @@
 #include "ofApp.h"
+#include <map>
 #include "jsonParser.h"
+#include "nbaGame.h"
 #include "nbaScraper.h"
 #include "nbaTeamStats.h"
-#include "nbaGame.h"
-#include <map>
+#include "userInterface.h"
 
-
+std::vector<nba_stats::NbaGame> upcomingGames;
+std::map<std::string, nba_stats::NbaTeamStats> teams;
+user_interface::UpcomingGamesDisplay upcomingGamesDisplay;
 //--------------------------------------------------------------
 void ofApp::setup() {
-
     ofBackground(50, 50, 50);
 
-	std::vector<nba_stats::NbaGame> upcomingGames;
     nba_stats::GetUpcomingGames(upcomingGames);
-    
-	std::map<std::string, nba_stats::NbaTeamStats> teams;
     nba_stats::GetTeams(teams);
-    std::cout << teams["NYK"].GetWinPercentage() << std::endl;
 
-	/*
-    std::string teamStatsJson = nba_stats::GetStrContentsFromUrl(TEAM_STATS_URL);
-    nba_stats::NbaTeamStats knicksStats;
-    nba_stats::GetTeamStatsFromJson(knicksStats, "knicks", teamStatsJson);
-    std::cout << knicksStats.GetInfo("name") << std::endl;
-
-	std::string recordsJson = nba_stats::GetStrContentsFromUrl(RECORDS_URL.c_str());
-    nba_stats::SetTeamWinsLossesFromJson(knicksStats, recordsJson);
-    std::cout << "wins: " << knicksStats.GetWins() << std::endl;
-    std::cout << "losses: " << knicksStats.GetLosses() << std::endl;
-    std::cout << "win pctg: " << knicksStats.GetWinPercentage() << std::endl;
-
-	
-	std::string upcomingGamesJson = nba_stats::GetStrContentsFromUrl(SPREADS_URL.c_str());
-    nba_stats::NbaGame game;
-    nba_stats::GetUpcomingGameFromJson(game, 0, upcomingGamesJson);
-    std::cout << game.getIsHomeTeamFavorite() << std::endl;
-	*/
+    upcomingGamesDisplay.setup(upcomingGames);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {}
 
 //--------------------------------------------------------------
-void ofApp::draw() {}
+void ofApp::draw() { upcomingGamesDisplay.draw();  }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {}

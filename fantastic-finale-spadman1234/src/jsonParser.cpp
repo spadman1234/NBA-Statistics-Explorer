@@ -49,6 +49,9 @@ bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
     std::string awayTeam = gameJson["awayTeam"].GetString();
     std::string homeTeam = gameJson["homeTeam"].GetString();
     std::string date = gameJson["startDate"].GetString();
+	if (!gameJson.HasMember("gameSpreadHomeHandicap")) {
+		return false;
+	}
     float homeTeamHandicap = std::stof(gameJson["gameSpreadHomeHandicap"].GetString());
     bool isHomeTeamFavored = (homeTeamHandicap < 0);
 
