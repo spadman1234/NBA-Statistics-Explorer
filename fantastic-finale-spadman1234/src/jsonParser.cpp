@@ -1,7 +1,7 @@
 #include "jsonParser.h"
 
 namespace nba_stats {
-bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamcode, std::string json) {
+bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamAbbreviation, std::string json) {
     std::string kTeamStatNames[15] = {"min",  "fgp",  "tpp", "ftp",  "orpg",
                                   "drpg", "trpg", "apg", "tpg",  "spg",
                                   "bpg",  "pfpg", "ppg", "oppg", "eff"};
@@ -17,7 +17,7 @@ bool GetTeamStatsFromJson(NbaTeamStats &team, std::string teamcode, std::string 
     int numTeams = document["league"]["standard"]["regularSeason"]["teams"].GetArray().Size();
     for (int i = 0; i < numTeams; i++) {
         if (document["league"]["standard"]["regularSeason"]["teams"][i]
-                    ["teamcode"].GetString() == teamcode) {
+                    ["abbreviation"].GetString() == teamAbbreviation) {
             for (std::string str : kTeamStatNames) {
                 statmap[str] = std::stof(document["league"]["standard"]["regularSeason"]["teams"][i][str.c_str()]["avg"].GetString());
 			}
@@ -41,6 +41,9 @@ bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
     assert(document.HasMember("games"));
 
 	std::string gameId = std::to_string(gameNum);
+    if (!document["games"].HasMember(gameId.c_str())) {
+		return false;
+    }
 	auto gameJson = document["games"][gameId.c_str()].GetObject();
 	
     std::string awayTeam = gameJson["awayTeam"].GetString();
@@ -56,7 +59,6 @@ bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
 bool SetTeamWinsLossesFromJson(NbaTeamStats &team, std::string json) { 
 	rapidjson::Document document;
     document.Parse(json.c_str());
-    assert(document.HasMember("league"));
 
 	//auto teams = document["league"]["standard"]["teams"].GetObject();
     std::string teamAbbreviation = team.GetInfo("abbreviation");
