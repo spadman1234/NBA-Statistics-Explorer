@@ -1,6 +1,7 @@
 #pragma once
 #include "ofxGui.h"
 #include "nbaGame.h"
+#include "nbaTeamStats.h"
 
 namespace user_interface {
 class UpcomingGamesDisplay {
@@ -10,13 +11,15 @@ private:
 	int selection_;
 	int numGames_;
 	std::vector<nba_stats::NbaGame> upcomingGames_;
+	std::map<std::string, nba_stats::NbaTeamStats> teams_;
 
 	std::string GetStringFromGame(nba_stats::NbaGame & game);
-	std::string BeautifySpread(float val);
 
 public:
-    void setup(std::vector<nba_stats::NbaGame> & upcomingGames);
+    void setup(std::vector<nba_stats::NbaGame> & upcomingGames,
+		std::map<std::string, nba_stats::NbaTeamStats> & teams);
 	void draw();
 	void handleInput(int keycode);
+	static std::string BeautifyFloat(float val, int numDigitsAfterDecimal);
 };
 }

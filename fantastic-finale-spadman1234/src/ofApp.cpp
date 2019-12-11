@@ -4,7 +4,7 @@
 #include "nbaGame.h"
 #include "nbaScraper.h"
 #include "nbaTeamStats.h"
-#include "userInterface.h"
+#include "upcomingGamesDisplay.h"
 
 std::vector<nba_stats::NbaGame> upcomingGames;
 std::map<std::string, nba_stats::NbaTeamStats> teams;
@@ -16,7 +16,7 @@ void ofApp::setup() {
     nba_stats::GetUpcomingGames(upcomingGames);
     nba_stats::GetTeams(teams);
 
-    upcomingGamesDisplay.setup(upcomingGames);
+    upcomingGamesDisplay.setup(upcomingGames, teams);
 }
 
 //--------------------------------------------------------------

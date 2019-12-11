@@ -180,6 +180,7 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameDisplay.cpp" />
     <ClCompile Include="src\jsonParser.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\nbaGame.cpp" />
@@ -201,7 +202,7 @@
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.cpp" />
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.cpp" />
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp" />
-    <ClCompile Include="src\userInterface.cpp" />
+    <ClCompile Include="src\upcomingGamesDisplay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\allocators.h" />
@@ -224,6 +225,7 @@
     <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stream.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\stringbuffer.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\rapidjson-master\rapidjson-master\include\rapidjson\writer.h" />
+    <ClInclude Include="src\gameDisplay.h" />
     <ClInclude Include="src\jsonParser.h" />
     <ClInclude Include="src\nbaGame.h" />
     <ClInclude Include="src\nbaScraper.h" />
@@ -248,7 +250,7 @@
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPSettings.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h" />
-    <ClInclude Include="src\userInterface.h" />
+    <ClInclude Include="src\upcomingGamesDisplay.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

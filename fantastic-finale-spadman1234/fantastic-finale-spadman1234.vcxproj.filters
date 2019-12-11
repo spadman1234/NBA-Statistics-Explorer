@@ -64,7 +64,10 @@
     <ClCompile Include="src\nbaGame.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\userInterface.cpp">
+    <ClCompile Include="src\upcomingGamesDisplay.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameDisplay.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -227,7 +230,10 @@
     <ClInclude Include="src\nbaGame.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\userInterface.h">
+    <ClInclude Include="src\upcomingGamesDisplay.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameDisplay.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

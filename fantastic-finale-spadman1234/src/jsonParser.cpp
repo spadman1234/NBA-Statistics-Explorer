@@ -49,13 +49,19 @@ bool GetUpcomingGameFromJson(NbaGame &game, int gameNum, std::string json) {
     std::string awayTeam = gameJson["awayTeam"].GetString();
     std::string homeTeam = gameJson["homeTeam"].GetString();
     std::string date = gameJson["startDate"].GetString();
-	if (!gameJson.HasMember("gameSpreadHomeHandicap")) {
-		return false;
+	float homeTeamHandicap = 0;
+	bool isHomeTeamFavored = false;
+	if (gameJson.HasMember("gameSpreadHomeHandicap")) {
+		homeTeamHandicap = std::stof(gameJson["gameSpreadHomeHandicap"].GetString());
+		isHomeTeamFavored = (homeTeamHandicap < 0);
 	}
-    float homeTeamHandicap = std::stof(gameJson["gameSpreadHomeHandicap"].GetString());
-    bool isHomeTeamFavored = (homeTeamHandicap < 0);
+	bool isUpcoming = true;
+	std::string isLive = gameJson["isLive"].GetString();
+	if (isLive.compare("1") == 0) {
+		isUpcoming = false;
+	}
 
-	game.init(homeTeam, awayTeam, date, true, 0, 0, homeTeamHandicap,
+	game.init(homeTeam, awayTeam, date, isUpcoming, 0, 0, homeTeamHandicap,
                        isHomeTeamFavored);
     return true;
 }
@@ -63,7 +69,6 @@ bool SetTeamWinsLossesFromJson(NbaTeamStats &team, std::string json) {
 	rapidjson::Document document;
     document.Parse(json.c_str());
 
-	//auto teams = document["league"]["standard"]["teams"].GetObject();
     std::string teamAbbreviation = team.GetInfo("abbreviation");
 
 	int numTeams = document["league"]["standard"]["teams"].GetArray().Size();
