@@ -13,6 +13,7 @@ private:
     int wins_;
     int losses_;
     float winpctg_;
+	float avgPointDifferential_;
     /*
 	float min_;  //average minutes
     float fgp_;  //field goal percentage
@@ -42,6 +43,7 @@ public:
     int GetWins();
     int GetLosses();
     float GetWinPercentage();
+	float GetAvgPointDifferential();
 };
 
 }

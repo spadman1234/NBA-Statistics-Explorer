@@ -15,6 +15,7 @@ void nba_stats::NbaTeamStats::init(std::map<std::string, std::string>& info,
                                    std::map<std::string, float>& stats) {
     info_ = info;
     stats_ = stats;
+	avgPointDifferential_ = stats_["ppg"] - stats_["oppg"];
 }
 
 float nba_stats::NbaTeamStats::GetStat(std::string statname) {
@@ -36,3 +37,5 @@ int nba_stats::NbaTeamStats::GetWins() { return wins_; }
 int nba_stats::NbaTeamStats::GetLosses() { return losses_; }
 
 float nba_stats::NbaTeamStats::GetWinPercentage() { return winpctg_; }
+
+float nba_stats::NbaTeamStats::GetAvgPointDifferential() { return avgPointDifferential_; }

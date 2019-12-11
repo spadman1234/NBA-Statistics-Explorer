@@ -63,8 +63,9 @@ void user_interface::GameDisplay::setup(nba_stats::NbaGame & game, std::map<std:
 void user_interface::GameDisplay::draw()
 {
 	if (isVisible_) {
-		drawTeamStats(hometeam_, true);
-		drawTeamStats(awayteam_, false);
+		drawTeamStats(hometeam_, false);
+		drawTeamStats(awayteam_, true);
+		font.drawString("@", ofGetWidth() / 2 - font.stringWidth("@") / 2, Y_PADDING);
 		for (int i = 0; i < NUM_STATS; i++) {
 			font.drawString(STATS[i], ofGetWidth() / 2 - 6 * X_PADDING, Y_PADDING + (i + 3) * Y_OFFSET);
 		}

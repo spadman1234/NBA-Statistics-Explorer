@@ -70,6 +70,18 @@
     <ClCompile Include="src\gameDisplay.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\regression\Dataset.cpp">
+      <Filter>src\regression</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regression\linear_regression.cpp">
+      <Filter>src\regression</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regression\utils.cpp">
+      <Filter>src\regression</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regression\Weights.cpp">
+      <Filter>src\regression</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -95,6 +107,9 @@
     </Filter>
     <Filter Include="src\rapidjson">
       <UniqueIdentifier>{0ec8d41e-44af-4fc5-a7f9-9406fa500c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\regression">
+      <UniqueIdentifier>{befffa55-ae2c-481e-a36f-e6ce770ba401}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +250,15 @@
     </ClInclude>
     <ClInclude Include="src\gameDisplay.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regression\Dataset.h">
+      <Filter>src\regression</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regression\utils.h">
+      <Filter>src\regression</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regression\Weights.h">
+      <Filter>src\regression</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

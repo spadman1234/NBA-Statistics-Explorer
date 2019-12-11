@@ -202,6 +202,10 @@
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.cpp" />
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.cpp" />
     <ClCompile Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp" />
+    <ClCompile Include="src\regression\Dataset.cpp" />
+    <ClCompile Include="src\regression\linear_regression.cpp" />
+    <ClCompile Include="src\regression\utils.cpp" />
+    <ClCompile Include="src\regression\Weights.cpp" />
     <ClCompile Include="src\upcomingGamesDisplay.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +254,9 @@
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPSettings.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\of_v0.10.1_vs2017_release\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h" />
+    <ClInclude Include="src\regression\Dataset.h" />
+    <ClInclude Include="src\regression\utils.h" />
+    <ClInclude Include="src\regression\Weights.h" />
     <ClInclude Include="src\upcomingGamesDisplay.h" />
   </ItemGroup>
   <ItemGroup>
