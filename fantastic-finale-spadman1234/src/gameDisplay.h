@@ -17,5 +17,6 @@ private:
 public:
 	void setup(nba_stats::NbaGame & game, std::map<std::string, nba_stats::NbaTeamStats> & teams);
 	void draw();
+	bool handleInput(int keycode);
 };
 }

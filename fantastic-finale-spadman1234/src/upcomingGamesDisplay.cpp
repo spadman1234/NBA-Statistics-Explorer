@@ -67,14 +67,21 @@ void user_interface::UpcomingGamesDisplay::draw() {
 
 void user_interface::UpcomingGamesDisplay::handleInput(int keycode)
 { 
-	if (keycode == UP_ARROW_KEYCODE && selection_ > 0) {
-		selection_ -= 1;
+	if (isVisible_) {
+		if (keycode == UP_ARROW_KEYCODE && selection_ > 0) {
+			selection_ -= 1;
+		}
+		else if (keycode == DOWN_ARROW_KEYCODE && selection_ < numGames_ - 1) {
+			selection_ += 1;
+		}
+		else if (keycode == ENTER_KEYCODE) {
+			isVisible_ = false;
+			gameDisplay.setup(upcomingGames_.at(selection_), teams_);
+		}
 	}
-	else if (keycode == DOWN_ARROW_KEYCODE && selection_ < numGames_ - 1) {
-		selection_ += 1;
-	}
-	else if (keycode == ENTER_KEYCODE) {
-		isVisible_ = false;
-		gameDisplay.setup(upcomingGames_.at(selection_), teams_);
+	else {
+		if (gameDisplay.handleInput(keycode)) {
+			isVisible_ = true;
+		}
 	}
 }

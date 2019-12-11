@@ -13,6 +13,7 @@ const std::map<std::string, std::string> NAME_TO_NICKNAME_MAP = {
 {"Orlando Magic", "ORL"}, {"Philadelphia 76ers", "PHI"}, {"Phoenix Suns", "PHX"}, 
 {"Portland Trail Blazers", "POR"}, {"Sacramento Kings", "SAC"}, {"San Antonio Spurs", "SAS"}, 
 {"Toronto Raptors", "TOR" }, { "Utah Jazz", "UTA" }, { "Washington Wizards", "WAS" } };
+
 const int FONT_SIZE = 30;
 const int X_PADDING = 50;
 const int Y_PADDING = 50;
@@ -68,4 +69,15 @@ void user_interface::GameDisplay::draw()
 			font.drawString(STATS[i], ofGetWidth() / 2 - 6 * X_PADDING, Y_PADDING + (i + 3) * Y_OFFSET);
 		}
 	}
+}
+
+// Returns true if the parent UI should become visible
+bool user_interface::GameDisplay::handleInput(int keycode) {
+	if (isVisible_) {
+		if (keycode == 8) {
+			isVisible_ = false;
+			return true;
+		}
+	}
+	return false;
 }
