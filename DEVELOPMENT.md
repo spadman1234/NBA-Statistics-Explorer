@@ -38,3 +38,7 @@
 ## 12/9
 - The NbaGame can now be populated with data about upcoming games using a new data source
 - A third data source is now used to get wins and losses for each team
+
+## 12/10
+- Created GUI to display a list of all upcoming games
+- Games can be selected with the keyboard to display all statistics for teams involved in the game
