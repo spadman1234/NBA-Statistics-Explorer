@@ -70,16 +70,19 @@
     <ClCompile Include="src\gameDisplay.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\regression\Dataset.cpp">
+    <ClCompile Include="src\regressionWizard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regression\dataset.cpp">
       <Filter>src\regression</Filter>
     </ClCompile>
-    <ClCompile Include="src\regression\linear_regression.cpp">
+    <ClCompile Include="src\regression\weights.cpp">
       <Filter>src\regression</Filter>
     </ClCompile>
     <ClCompile Include="src\regression\utils.cpp">
       <Filter>src\regression</Filter>
     </ClCompile>
-    <ClCompile Include="src\regression\Weights.cpp">
+    <ClCompile Include="src\regression\model.cpp">
       <Filter>src\regression</Filter>
     </ClCompile>
   </ItemGroup>
@@ -109,7 +112,7 @@
       <UniqueIdentifier>{0ec8d41e-44af-4fc5-a7f9-9406fa500c1f}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\regression">
-      <UniqueIdentifier>{befffa55-ae2c-481e-a36f-e6ce770ba401}</UniqueIdentifier>
+      <UniqueIdentifier>{420662a3-ffc4-4907-a27c-864db444bc9c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -251,13 +254,19 @@
     <ClInclude Include="src\gameDisplay.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\regression\Dataset.h">
+    <ClInclude Include="src\regressionWizard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regression\dataset.h">
+      <Filter>src\regression</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regression\weights.h">
       <Filter>src\regression</Filter>
     </ClInclude>
     <ClInclude Include="src\regression\utils.h">
       <Filter>src\regression</Filter>
     </ClInclude>
-    <ClInclude Include="src\regression\Weights.h">
+    <ClInclude Include="src\regression\model.h">
       <Filter>src\regression</Filter>
     </ClInclude>
   </ItemGroup>

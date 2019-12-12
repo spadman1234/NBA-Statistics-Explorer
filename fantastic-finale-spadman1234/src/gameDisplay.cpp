@@ -19,6 +19,7 @@ const int X_PADDING = 50;
 const int Y_PADDING = 50;
 const int Y_OFFSET = 50;
 const int NUM_STATS = 15;
+const int BACKSPACE_KEYCODE = 8;
 const std::string STATS[NUM_STATS] = { "min",  "fgp",  "tpp", "ftp",  "orpg",
 									  "drpg", "trpg", "apg", "tpg",  "spg",
 									  "bpg",  "pfpg", "ppg", "oppg", "eff" };
@@ -63,6 +64,7 @@ void user_interface::GameDisplay::setup(nba_stats::NbaGame & game, std::map<std:
 void user_interface::GameDisplay::draw()
 {
 	if (isVisible_) {
+		font.drawString("[BACKSPACE] to go back", X_PADDING, Y_PADDING);
 		drawTeamStats(hometeam_, false);
 		drawTeamStats(awayteam_, true);
 		font.drawString("@", ofGetWidth() / 2 - font.stringWidth("@") / 2, Y_PADDING);
@@ -75,7 +77,7 @@ void user_interface::GameDisplay::draw()
 // Returns true if the parent UI should become visible
 bool user_interface::GameDisplay::handleInput(int keycode) {
 	if (isVisible_) {
-		if (keycode == 8) {
+		if (keycode == BACKSPACE_KEYCODE) {
 			isVisible_ = false;
 			return true;
 		}

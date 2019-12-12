@@ -12,7 +12,7 @@
 using namespace std;
 
 const char* TMP_FILENAME = "tmpdata";
-const std::string API_KEY = "25af9164ab8f913d1fa2cd94e87d93f5";
+const std::string API_KEY = "2c84b4e3f6deefec60a6a51777e2e708";
 const std::string SPREADS_URL =
     "https://203.cheapdatafeeds.com/api/json/odds-main/v1/basketball/"
     "nba?api-key=" +

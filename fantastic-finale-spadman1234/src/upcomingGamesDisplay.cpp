@@ -1,5 +1,6 @@
 #include "upcomingGamesDisplay.h"
 #include "gameDisplay.h"
+#include "regressionWizard.h"
 
 //-------------------------------------
 const int Y_PADDING          = 50;
@@ -10,7 +11,9 @@ const std::string FONT_NAME  = "arial.ttf";
 const int UP_ARROW_KEYCODE   = 57357;
 const int DOWN_ARROW_KEYCODE = 57359;
 const int ENTER_KEYCODE      = 13;
+const int R_KEYCODE          = 114;
 user_interface::GameDisplay gameDisplay;
+user_interface::RegressionWizard regressionWizard;
 //-------------------------------------
 
 std::string user_interface::UpcomingGamesDisplay::GetStringFromGame(nba_stats::NbaGame & game) {
@@ -48,6 +51,7 @@ void user_interface::UpcomingGamesDisplay::setup(std::vector<nba_stats::NbaGame>
 void user_interface::UpcomingGamesDisplay::draw() {
 	if(isVisible_) {
 		font.drawString("UPCOMING GAMES:", X_PADDING, Y_PADDING);
+		font.drawString("Press [R] to create a linear regression model", ofGetWidth() / 2, Y_PADDING);
 		for (int i = 0; i < upcomingGames_.size(); i++) {
 			if (selection_ == i) {
 				ofSetColor(250, 255, 95);
@@ -61,6 +65,7 @@ void user_interface::UpcomingGamesDisplay::draw() {
 	}
 	else {
 		gameDisplay.draw();
+		regressionWizard.draw();
 	}
 	ofSetColor(255, 255, 255);
 }
@@ -78,9 +83,13 @@ void user_interface::UpcomingGamesDisplay::handleInput(int keycode)
 			isVisible_ = false;
 			gameDisplay.setup(upcomingGames_.at(selection_), teams_);
 		}
+		else if (keycode == R_KEYCODE) {
+			isVisible_ = false;
+			regressionWizard.setup(teams_);
+		}
 	}
 	else {
-		if (gameDisplay.handleInput(keycode)) {
+		if (gameDisplay.handleInput(keycode) || regressionWizard.handleInput(keycode)) {
 			isVisible_ = true;
 		}
 	}
