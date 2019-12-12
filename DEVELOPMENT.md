@@ -43,3 +43,7 @@
 - Created GUI to display a list of all upcoming games
 - Games can be selected with the keyboard to display all statistics for teams involved in the game
 - Installed library for linear regression from [https://github.com/yacineMahdid/Algorithms](https://github.com/yacineMahdid/Algorithms)
+
+## 12/11
+- Created GUI for the user to create linear regression models by selecting independent variables
+- Using regression models, my program now predicts win percentages for each NBA team and display them on the screen
