@@ -42,3 +42,4 @@
 ## 12/10
 - Created GUI to display a list of all upcoming games
 - Games can be selected with the keyboard to display all statistics for teams involved in the game
+- Installed library for linear regression from [https://github.com/yacineMahdid/Algorithms](https://github.com/yacineMahdid/Algorithms)
